@@ -2,13 +2,11 @@
 <html lang="en">
 
 <head>
-    <title>ADD TO CARD</title>
-
-
-<style>
+    <title>Shopping Cart</title>
+    <style>
         body {
             font-family: Arial, sans-serif;
-            background-image:url('https://img.freepik.com/free-vector/blank-blue-leafy-poster_53876-99945.jpg?w=996&t=st=1705659501~exp=1705660101~hmac=878fe3d9b1c9d0cfdc4cf4b167e20302ba9d45217332cbc6bf56095db43611ef');
+            background-image: url('https://img.freepik.com/free-vector/blank-blue-leafy-poster_53876-99945.jpg?w=996&t=st=1705659501~exp=1705660101~hmac=878fe3d9b1c9d0cfdc4cf4b167e20302ba9d45217332cbc6bf56095db43611ef');
             margin: 0;
             padding: 20px;
             text-align: center;
@@ -20,36 +18,23 @@
             color: #333;
         }
 
-        ul {
-            list-style: none;
-            padding: 0;
+        table {
+            width: 50%;
+            margin: 20px auto;
+            border-collapse: collapse;
         }
 
-        li {
-            background-color: #fff;
+        th,
+        td {
             border: 1px solid #ddd;
             padding: 10px;
-            margin-bottom: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            text-align: left;
         }
 
-        li:hover {
-            background-color: #f8f8f8;
+        th {
+            background-color: #04AA6D;
+            color: white;
         }
-
-        .card{
-            width: 800px;
-            max-width: 100%;
-            justify-content: center;
-            align-items: center;
-            margin-left: 350px;
-            margin-top: 100px;
-            
-            
-        }
-
         button {
          background-color: #04AA6D;
         color: black;
@@ -74,42 +59,33 @@ button:hover {
   opacity: 0.8;
 }
     </style>
-
-
-
-
-
-
 </head>
 
 <body>
-
-    <div class="card">
-        
-    
-    <h1>Shopping Cart</h1>
-    <ul id="cartItems"></ul>
-
+    <h1>Your Shopping Cart</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Book Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody id="cartItems"></tbody>
+    </table>
     <button onclick="alert('Click OK for Payment Page')"><a href="payment.html">Make Payment</a></button>
-</div>
-
     <script>
-        
-        const cart = localStorage.getItem("cart");
+        document.addEventListener("DOMContentLoaded", function () {
+            displayCartItems();
+        });
 
-        
-        if (cart) {
-            
-            const cartArray = JSON.parse(cart);
+        function displayCartItems() {
+            const cartItemsContainer = document.getElementById("cartItems");
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-            
-            const cartItemsList = document.getElementById("cartItems");
-
-            
-            cartArray.forEach((item) => {
-                const li = document.createElement("li");
-                li.textContent = item;
-                cartItemsList.appendChild(li);
+            cart.forEach(item => {
+                const row = document.createElement("tr");
+                row.innerHTML = `<td>${item.book}</td><td>${item.price}</td>`;
+                cartItemsContainer.appendChild(row);
             });
         }
     </script>

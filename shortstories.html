@@ -13,18 +13,18 @@
             padding: 0;
             background-color: #f4f4f4;
         }
-        
+
         .card {
             transition: transform .2s;
             display: flex;
             flex: 1 0 21%;
             margin: 10px;
         }
-        
+
         .card:hover {
             transform: scale(1.05);
         }
-        
+
         header {
             background-color: #333;
             color: #fff;
@@ -36,21 +36,56 @@
             background-attachment: fixed;
             height: 300px;
         }
-        img{
+
+        img {
             max-width: 100%;
             max-height: 100%;
-            width:100px;
-            height:300px;
+            width: 100px;
+            height: 300px;
         }
-        #to{
-        translate: 0px 20px;
-     }
-     #to1{
-        translate: 0px 50px;
-     }
-     #to2{
-        translate: 0px 50px;
-     }
+
+        #to {
+            translate: 0px 20px;
+        }
+
+        #to1 {
+            translate: 0px 50px;
+        }
+
+        #to2 {
+            translate: 0px 50px;
+        }
+
+        .offcanvas-body {
+            padding: 10px;
+        }
+
+        .offcanvas-heading {
+            width: 100%;
+            text-align: left;
+            padding: 8px 0;
+            background: none;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+
+        }
+
+        .offcanvas-section {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        .offcanvas-divider {
+            margin: 0;
+            border-top: 1px solid #ddd;
+        }
+
+        #sci,
+        #sho {
+            text-decoration: none;
+            color: black;
+        }
     </style>
 </head>
 
@@ -78,7 +113,13 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="#">Contact Us</a>
                     </li>
-                   
+                    <li class="nav-item">
+                        <a class="nav-link active" href="cart.html"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+                            </svg>Cart</a>
+                    </li>
 
                 </ul>
                 <form class="d-flex" role="search">
@@ -88,7 +129,38 @@
             </div>
         </div>
     </nav>
-    <header style="background-size: cover;
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="servicesOffcanvas" aria-labelledby="servicesOffcanvasLabel"
+        data-bs-scroll="true" data-bs-backdrop="true">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="servicesOffcanvasLabel">Menu</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <h6 class="offcanvas-heading border-bottom border-danger" data-bs-toggle="collapse"
+                data-bs-target="#section1">SCI-FICTION</h6>
+            <div class="collapse offcanvas-section" id="section1">
+                <p> <a href="scific.html" id="sci">Journey to the Centre of the Earth</a> </p>
+                <p> <a href="scific.html" id="sci">The War of the World</a></p>
+                <p> <a href="scific.html" id="sci">Mission of Gravity</a> </p>
+                <p> <a href="scific.html" id="sci">Solaris</a> </p>
+            </div>
+            <hr class="offcanvas-divider">
+
+            <h6 class="offcanvas-heading border-bottom border-danger" data-bs-toggle="collapse"
+                data-bs-target="#section2">SHORT-STORIES</h6>
+            <div class="collapse offcanvas-section" id="section2">
+                <p><a href="shortstories.html" id="sho"> The Magic Of The Lost Temple</a> </p>
+                <p><a href="shortstories.html" id="sho">The Kid Who Came From Space</a> </p>
+                <p><a href="shortstories.html" id="sho">GREAT STORIES FOR CHILDREN</a> </p>
+                <p><a href="shortstories.html" id="sho">Fairy Tales And Fables</a></p>
+            </div>
+
+
+
+        </div>
+    </div>
+    <header
+        style="background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;background-image: url('https://cutewallpaper.org/21/background-for-kids/Color-frame-with-group-of-kids-and-giraffe-background.jpg');">
         <h1 style="margin-top: 200px; color:black;">Short Stories</h1>
@@ -97,121 +169,170 @@
         <div class="row">
             <div class="col">
                 <div class="card h-100">
-                    <img src="https://m.media-amazon.com/images/I/81Y4Pte2a-L.SL1500.jpg" class="card-img-top" alt="Book Cover">
+                    <img src="https://m.media-amazon.com/images/I/81Y4Pte2a-L.SL1500.jpg" class="card-img-top"
+                        alt="Book Cover">
                     <div class="card-body">
                         <h5 class="card-title book-name">The Magic Of The Lost Temple</h5>
-                        <p class="card-text">Author: <a target="_blank" href="https://en.wikipedia.org/wiki/Sudha_Murty"> Sudha Murty</a></p>
-                        <p class="card-text">Are you a curious reader, ready to explore the depths of the magic hidden in the lost temple of Karnataka? Are you ready to join Nooni </p>
-                        <p style="color: red;">&#8377;500</p>
-                            <button type="button" class="btn btn-warning" onclick="addToCart(this)" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
-                                <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0"/>
-                              </svg>Add To Cart</button>
+                        <p class="card-text">Author: <a target="_blank"
+                                href="https://en.wikipedia.org/wiki/Sudha_Murty"> Sudha Murty</a></p>
+                        <p class="card-text">Are you a curious reader, ready to explore the depths of the magic hidden
+                            in the lost temple of Karnataka? Are you ready to join Nooni </p>
+                        <p class="card-text price" style="color: red;">&#8377;100</p>
+                            <button type="button" class="btn btn-warning" onclick="addToCart(this)"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
+                                </svg>Add To Cart</button>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="https://m.media-amazon.com/images/I/81evNO+JD-L.SL1500.jpg" class="card-img-top" alt="Book Cover">
+                    <img src="https://m.media-amazon.com/images/I/81evNO+JD-L.SL1500.jpg" class="card-img-top"
+                        alt="Book Cover">
                     <div class="card-body">
                         <h5 class="card-title book-name">The Kid Who Came From Space</h5>
-                        <p class="card-text">Author: <a target="_blank" href="https://en.wikipedia.org/wiki/Ross_Welford"> Ross Welford</a></p>
-                        <p class="card-text">A small village in the wilds of northumberland is rocked by the disappearance of twelve-year-old Tammy. 
-                            </p>
-                            <p style="color: red;" id="pr">&#8377;500</p>
-                        <button type="button" class="btn btn-warning" id="to" onclick="addToCart(this)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
-                        <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0"/>
-                        </svg>Add To Cart</button>
-                        </div>
+                        <p class="card-text">Author: <a target="_blank"
+                                href="https://en.wikipedia.org/wiki/Ross_Welford"> Ross Welford</a></p>
+                        <p class="card-text">A small village in the wilds of northumberland is rocked by the
+                            disappearance of twelve-year-old Tammy.
+                        </p>
+                        <p class="card-text price" style="color: red;" id="pr">&#8377;350</p>
+                            <button type="button" class="btn btn-warning" id="to" onclick="addToCart(this)"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
+                                </svg>Add To Cart</button>
+                    </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="https://m.media-amazon.com/images/I/81BNrA1kNLL.SL1500.jpg" class="card-img-top" alt="Book Cover">
+                    <img src="https://m.media-amazon.com/images/I/81BNrA1kNLL.SL1500.jpg" class="card-img-top"
+                        alt="Book Cover">
                     <div class="card-body">
                         <h5 class="card-title book-name">GREAT STORIES FOR CHILDREN</h5>
-                        <p class="card-text">Author: <a target="_blank" href="https://en.wikipedia.org/wiki/Ruskin_Bond"> Ruskin Bond</a></p>
-                        <p class="card-text">Great Stories for Children is a collection of some of Ruskin Bond's most delightful children's stories. It stars Toto, the monkey, .</p>
-                        <p style="color: red;" id="pr">&#8377;500</p>
-                        <button type="button" class="btn btn-warning" id="to" onclick="addToCart(this)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
-                            <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0"/>
-                          </svg>Add To Cart</button>
+                        <p class="card-text">Author: <a target="_blank"
+                                href="https://en.wikipedia.org/wiki/Ruskin_Bond"> Ruskin Bond</a></p>
+                        <p class="card-text">Great Stories for Children is a collection of some of Ruskin Bond's most
+                            delightful children's stories. It stars Toto, the monkey, .</p>
+                        <p class="card-text price" style="color: red;" id="pr">&#8377;465</p>
+                            <button type="button" class="btn btn-warning" id="to" onclick="addToCart(this)"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
+                                </svg>Add To Cart</button>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="https://m.media-amazon.com/images/I/61nn-mMik3L.SL1000.jpg" class="card-img-top" alt="Book Cover">
+                    <img src="https://m.media-amazon.com/images/I/61nn-mMik3L.SL1000.jpg" class="card-img-top"
+                        alt="Book Cover">
                     <div class="card-body">
                         <h5 class="card-title book-name">All Time Favourites for Children</h5>
-                        <p class="card-text">Author: <a target="_blank" href="https://en.wikipedia.org/wiki/Ruskin_Bond"> Ruskin Bond</a></p>
-                        <p class="card-text">All Time Favourites for Children celebrates Ruskin Bond's writing with stories that are perennially 
+                        <p class="card-text">Author: <a target="_blank"
+                                href="https://en.wikipedia.org/wiki/Ruskin_Bond"> Ruskin Bond</a></p>
+                        <p class="card-text">All Time Favourites for Children celebrates Ruskin Bond's writing with
+                            stories that are perennially
                             loved and can now be enjoyed in a single collectible volume.</p>
-                            <p style="color: red;" >&#8377;500</p>
-                        <button type="button" class="btn btn-warning" onclick="addToCart(this)" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
-                                <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0"/>
-                              </svg>Add To Cart</button>
+                        <p class="card-text price" style="color: red;">&#8377;500</p>
+                            <button type="button" class="btn btn-warning" onclick="addToCart(this)"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
+                                </svg>Add To Cart</button>
                     </div>
                 </div>
             </div>
-            
+
         </div><br>
         <div class="row">
             <div class="col">
                 <div class="card h-100">
-                    <img src="https://m.media-amazon.com/images/I/81-8AMYc+GL.SL1500.jpg" class="card-img-top" alt="Book Cover">
+                    <img src="https://m.media-amazon.com/images/I/81-8AMYc+GL.SL1500.jpg" class="card-img-top"
+                        alt="Book Cover">
                     <div class="card-body">
                         <h5 class="card-title book-name">Magical Stories for 6 year olds</h5>
-                        <p class="card-text">Author: <a target="_blank" href="https://www.waterstones.com/author/helen-paiba/50870"> Helen Paiba</a></p>
+                        <p class="card-text">Author: <a target="_blank"
+                                href="https://www.waterstones.com/author/helen-paiba/50870"> Helen Paiba</a></p>
                         <p class="card-text">
-                            Magical Stories for 6 Year Olds is a bright and varied selection of marvellously magical stories by some of the very best writers for children. Perfect for reading alone or aloud 
+                            Magical Stories for 6 Year Olds is a bright and varied selection of marvellously magical
+                            stories by some of the very best writers for children. Perfect for reading alone or aloud
                             and for dipping into time and time again.</p>
-                        <p style="color: red;">&#8377;500</p>
-                            <button type="button" class="btn btn-warning" onclick="addToCart(this)" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
-                                <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0"/>
-                              </svg>Add To Cart</button>
+                        <p class="card-text price" style="color: red;">&#8377;654</p>
+                            <button type="button" class="btn btn-warning" onclick="addToCart(this)"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
+                                </svg>Add To Cart</button>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="https://m.media-amazon.com/images/I/711BnHKiIOL.SL1500.jpg" class="card-img-top" alt="Book Cover">
+                    <img src="https://m.media-amazon.com/images/I/711BnHKiIOL.SL1500.jpg" class="card-img-top"
+                        alt="Book Cover">
                     <div class="card-body">
                         <h5 class="card-title book-name">Five Minutes Fairy Tales Pinocchio</h5>
-                        <p class="card-text">Author:  <a target="_blank" href="https://en.wikipedia.org/wiki/Wonder_Books"> Wonder House Books</a></p>
-                        <p class="card-text">A poor woodcarver is surprised when his wooden toy starts talking like a human. What happens when the naughty toy keeps telling lies?</p>
-                        <p style="color: red;" id="pr1">&#8377;500</p>
-                        <button type="button" class="btn btn-warning" id="to1"  onclick="addToCart(this)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
-                            <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0"/>
-                          </svg>Add To Cart</button>
+                        <p class="card-text">Author: <a target="_blank"
+                                href="https://en.wikipedia.org/wiki/Wonder_Books"> Wonder House Books</a></p>
+                        <p class="card-text">The story's main character is a living wooden puppet crafted by a toy maker
+                            Geppetto who adopts him as his son. In the beginning, Pinocchio is disobedient. He ignores
+                        </p>
+                        <p class="card-text price" style="color: red;" id="pr1">&#8377;700</p>
+                            <button type="button" class="btn btn-warning" id="to1" onclick="addToCart(this)"
+                                style="translate: 0vh 4vh;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
+                                </svg>Add To Cart</button>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="https://m.media-amazon.com/images/I/919ea26i6cS.SL1500.jpg" class="card-img-top" alt="Book Cover">
+                    <img src="https://m.media-amazon.com/images/I/919ea26i6cS.SL1500.jpg" class="card-img-top"
+                        alt="Book Cover">
                     <div class="card-body">
                         <h5 class="card-title book-name">Fairy Tales And Fables</h5>
-                        <p class="card-text">Author: <a target="_blank" href="https://en.wikipedia.org/wiki/Gyo_Fujikawa"> Gyo Fujikawa</a></p>
-                        <p class="card-text">These are the stories that all children should experience, that will nourish their young minds and imaginations: "Little Red Riding Hood", "Cinderella" and many more.</p>
-                        <p style="color: red;" id="pr1">&#8377;500</p>
-                        <button type="button" class="btn btn-warning" id="to1" onclick="addToCart(this)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
-                            <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0"/>
-                          </svg>Add To Cart</button>
+                        <p class="card-text">Author: <a target="_blank"
+                                href="https://en.wikipedia.org/wiki/Gyo_Fujikawa"> Gyo Fujikawa</a></p>
+                        <p class="card-text">These are the stories that all children should experience, that will
+                            nourish their young minds and imaginations: "Little Red Riding Hood", "Cinderella" and many
+                            more.</p>
+                        <p class="card-text price" style="color: red;" id="pr1">&#8377;800</p>
+                            <button type="button" class="btn btn-warning" id="to1" onclick="addToCart(this)"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
+                                </svg>Add To Cart</button>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="https://m.media-amazon.com/images/I/81TSIZwdtQL.SL1500.jpg" class="card-img-top" alt="Book Cover">
+                    <img src="https://m.media-amazon.com/images/I/81TSIZwdtQL.SL1500.jpg" class="card-img-top"
+                        alt="Book Cover">
                     <div class="card-body">
                         <h5 class="card-title book-name">Into The Sideways World</h5>
-                        <p class="card-text">Author: <a target="_blank" href="https://en.wikipedia.org/wiki/Ross_Welford"> Ross Welford</a></p>
-                        <p class="card-text">A solitary human ambassador navigates Winter, a gender-fluid planet, 
+                        <p class="card-text">Author: <a target="_blank"
+                                href="https://en.wikipedia.org/wiki/Ross_Welford"> Ross Welford</a></p>
+                        <p class="card-text">A solitary human ambassador navigates Winter, a gender-fluid planet,
                             aiming to integrate it into the expanding intergalactic community.</p>
-                        <p style="color: red;" >&#8377;500</p>
-                            <button type="button" class="btn btn-warning" onclick="addToCart(this)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
-                                <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0"/>
-                              </svg>Add To Cart</button>
+                        <p class="card-text price" style="color: red;">&#8377;960</p>
+                            <button type="button" class="btn btn-warning" onclick="addToCart(this)"
+                                style="translate: 0px 10vh;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-patch-plus-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0" />
+                                </svg>Add To Cart</button>
                     </div>
                 </div>
             </div>
@@ -220,28 +341,27 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         function addToCart(button) {
-            
-            const selectedBook = button.closest('.card-body').querySelector('.book-name').innerText;
-            
+            const cardBody = button.closest('.card-body');
+            const selectedBook = cardBody.querySelector('.book-name').innerText;
+            const price = cardBody.querySelector('.price').innerText;
+
             let cart = localStorage.getItem("cart");
 
-            
             if (!cart) {
                 cart = [];
             } else {
-                
                 cart = JSON.parse(cart);
             }
 
-        
-            cart.push(selectedBook);
-
             
+            cart.push({ book: selectedBook, price: price });
+
             localStorage.setItem("cart", JSON.stringify(cart));
 
-            
             window.location.href = "cart.html";
         }
+
+    </script>
     </script>
 </body>
 
